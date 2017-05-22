@@ -1,19 +1,17 @@
 package com.aergia
 
+import com.aergia.views.MainView
 import javax.swing.UIManager
-import javax.swing.JFrame.*
-import com.aergia.swing.*
+
+class Application {
+
+    fun start() {
+        MainView.build().show()
+    }
+}
 
 fun main(args: Array<String>) {
 	UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName())
 	
-	Window("Test Window") {
-		defaultCloseOperation = EXIT_ON_CLOSE
-		
-		visible = true
-		
-		add(Button("Test Button") {
-			
-		})
-	}
+	Application().start()
 }

@@ -10,6 +10,18 @@ class Button(text: String? = null, icon: Icon? = null): Component<JButton>(JButt
 		set(value) {
 			component.text = value
 		}
+
+    var mnemonic
+        get() = component.mnemonic
+        set(value) {
+            component.mnemonic = value
+        }
+
+	fun listen(listener: () -> Unit) {
+		component.addActionListener {
+			listener()
+		}
+	}
 }
 
 fun Button(text: String? = null, icon: Icon? = null, init: Button.() -> Unit): Button {
