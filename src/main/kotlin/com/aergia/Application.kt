@@ -1,12 +1,12 @@
 package com.aergia
 
-import com.aergia.views.MainView
+import com.aergia.views.WelcomeView
 import javax.swing.UIManager
 
 class Application {
 
     fun start() {
-        MainView.build().show()
+        WelcomeView.build().show()
     }
 }
 

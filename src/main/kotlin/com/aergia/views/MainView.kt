@@ -8,6 +8,7 @@ class MainView {
     companion object {
         fun build(): Window {
             return Window("Aergia") {
+                locationRelativeTo(null)
                 defaultCloseOperation = JFrame.EXIT_ON_CLOSE
 
                 icons(listOf(

@@ -23,6 +23,12 @@ class Dialog(parent: Container<Window>? = null, title: String = ""): Container<J
             component.defaultCloseOperation = value
         }
 
+    var modalityType
+        get() = component.modalityType
+        set(value) {
+            component.modalityType = value
+        }
+
     fun show() {
         visible = true
     }

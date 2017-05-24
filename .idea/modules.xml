@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/aergia.iml" filepath="$PROJECT_DIR$/aergia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aergia.iml" filepath="$PROJECT_DIR$/.idea/modules/aergia.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/aergia_main.iml" filepath="$PROJECT_DIR$/.idea/modules/aergia_main.iml" group="aergia" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/aergia_test.iml" filepath="$PROJECT_DIR$/.idea/modules/aergia_test.iml" group="aergia" />
     </modules>
