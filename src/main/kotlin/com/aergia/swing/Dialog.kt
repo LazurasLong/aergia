@@ -3,7 +3,12 @@ package com.aergia.swing
 import java.awt.Window
 import javax.swing.JDialog
 
-class Dialog(parent: Container<Window>? = null, title: String = ""): Container<JDialog>(JDialog(parent?.component, title)) {
+class Dialog(parent: Container<Window>? = null, title: String = "", init: Dialog.() -> Unit = {}):
+        Container<JDialog>(JDialog(parent?.component, title)) {
+
+    init {
+        init()
+    }
 
     var title
         get() = component.title
@@ -40,10 +45,4 @@ class Dialog(parent: Container<Window>? = null, title: String = ""): Container<J
     fun pack() {
         component.pack()
     }
-}
-
-fun Dialog(parent: Container<Window>? = null, title: String = "", init: Dialog.() -> Unit): Dialog {
-    val dialog = Dialog(parent, title)
-    dialog.init()
-    return dialog
 }

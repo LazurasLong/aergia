@@ -3,7 +3,12 @@ package com.aergia.swing
 import javax.swing.JButton
 import javax.swing.Icon
 
-class Button(text: String? = null, icon: Icon? = null): Component<JButton>(JButton(text, icon)) {
+class Button(text: String? = null, icon: Icon? = null, init: Button.() -> Unit = {}):
+        Component<JButton>(JButton(text, icon)) {
+
+    init {
+        init()
+    }
 	
 	var text
 		get() = component.text
@@ -22,10 +27,4 @@ class Button(text: String? = null, icon: Icon? = null): Component<JButton>(JButt
 			listener()
 		}
 	}
-}
-
-fun Button(text: String? = null, icon: Icon? = null, init: Button.() -> Unit): Button {
-	val button = Button(text, icon)
-	button.init()
-	return button
 }

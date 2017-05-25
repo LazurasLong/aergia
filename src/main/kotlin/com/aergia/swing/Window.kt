@@ -4,7 +4,11 @@ import java.awt.Component
 import java.awt.Image
 import javax.swing.JFrame
 
-class Window(title: String = ""): Container<JFrame>(JFrame(title)) {
+class Window(title: String = "", init: Window.() -> Unit = {}): Container<JFrame>(JFrame(title)) {
+
+    init {
+        init()
+    }
 
 	var title
 		get() = component.title
@@ -47,13 +51,18 @@ class Window(title: String = ""): Container<JFrame>(JFrame(title)) {
         component.setLocationRelativeTo(relative)
     }
 
-	fun icons(icons: List<Image>) {
-		component.iconImages = icons
-	}
-}
+    /**
+     * Icons collection to hold the application icon images. Its purpose is for internal use only.
+     */
+    class Icons: ArrayList<Image>() {
+        operator fun Image.unaryPlus() {
+            add(this)
+        }
+    }
 
-fun Window(title: String = "", init: Window.() -> Unit): Window {
-	val window = Window(title)
-	window.init()
-	return window
+	fun icons(init: Icons.() -> Unit) {
+        val list = Icons()
+        list.init()
+		component.iconImages = list
+	}
 }

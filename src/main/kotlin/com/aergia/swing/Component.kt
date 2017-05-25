@@ -1,5 +1,6 @@
 package com.aergia.swing
 
+import net.miginfocom.layout.CC
 import javax.swing.JComponent
 import java.awt.Component as AwtComponent
 
@@ -30,6 +31,15 @@ abstract class Component<out T: AwtComponent>(val component: T) {
 				component.toolTipText = value
 			}
 		}
+
+    val componentConstraints by lazy {
+        CC()
+    }
+
+	fun constraints(init: CC.() -> Unit): CC {
+        componentConstraints.init()
+        return componentConstraints
+    }
 
 	fun size(width: Int, height: Int) {
 		component.setSize(width, height)

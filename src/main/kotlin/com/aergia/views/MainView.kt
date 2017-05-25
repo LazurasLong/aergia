@@ -11,11 +11,11 @@ class MainView {
                 locationRelativeTo(null)
                 defaultCloseOperation = JFrame.EXIT_ON_CLOSE
 
-                icons(listOf(
-                    Resources.ICON_APP_64,
-                    Resources.ICON_APP_32,
-                    Resources.ICON_APP_16
-                ))
+                icons {
+                    +Resources.ICON_APP_64
+                    +Resources.ICON_APP_32
+                    +Resources.ICON_APP_16
+                }
             }
         }
     }
