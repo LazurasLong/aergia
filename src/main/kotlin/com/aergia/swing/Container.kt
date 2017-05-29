@@ -25,8 +25,7 @@ abstract class Container<out T: AwtContainer>(component: T): Component<T>(compon
 		component.add(child.component, child.componentConstraints)
 	}
 
-    fun layout(init: Layout.() -> Unit): Layout {
+    fun layout(init: Layout.() -> Unit) {
         layout.init()
-        return layout
     }
 }

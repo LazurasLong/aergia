@@ -1,24 +1,22 @@
 package com.aergia.controllers
 
-import com.aergia.swing.Window
 import com.aergia.views.MainView
+import com.aergia.views.WelcomeView
 
 class WelcomeController {
 
-    var view: Window? = null
+    private val view = WelcomeView(this)
+
+    fun showWelcome() {
+        view.open()
+    }
 
     fun btnNewGameClick() {
         MainView.build().show()
-        view?.close() // Find a better way to do this
+        view.close() // Find a better way to do this
     }
 
     fun btnExitClick() {
-        view?.close()
-    }
-
-    companion object {
-        val instance by lazy {
-            WelcomeController()
-        }
+        view.close()
     }
 }
