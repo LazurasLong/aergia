@@ -1,6 +1,5 @@
 package com.aergia.controllers
 
-import com.aergia.views.MainView
 import com.aergia.views.WelcomeView
 
 class WelcomeController {
@@ -12,8 +11,7 @@ class WelcomeController {
     }
 
     fun btnNewGameClick() {
-        MainView.build().show()
-        view.close() // Find a better way to do this
+        CharacterCreationController(view.viewRoot).showCharacterCreation()
     }
 
     fun btnExitClick() {

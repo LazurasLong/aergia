@@ -4,6 +4,9 @@ import net.miginfocom.layout.CC
 import javax.swing.JComponent
 import java.awt.Component as AwtComponent
 
+/**
+ * Base class for all components.
+ */
 abstract class Component<out T: AwtComponent>(val component: T) {
 
 	var visible
@@ -25,12 +28,16 @@ abstract class Component<out T: AwtComponent>(val component: T) {
 		}
 
 	var tooltipText
-		get(): String = if (component is JComponent) component.toolTipText else ""
+		get() = (component as? JComponent)?.toolTipText ?: ""
         set(value) {
-			if (component is JComponent) {
-				component.toolTipText = value
-			}
+            (component as? JComponent)?.toolTipText = value
 		}
+
+    var parent
+        get() = component.parent
+        set(value) {
+            component.parent
+        }
 
     val componentConstraints by lazy {
         CC()

@@ -6,7 +6,7 @@
         <compilerSettings />
         <compilerArguments>
           <option name="destination" value="C:\Projects\aergia\build\kotlin-classes\main" />
-          <option name="classpath" value="C:\Users\fernando.marquardt\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.1.2\109c63008b2d569e38696a3178ee2493b0f6c776\kotlin-stdlib-1.1.2.jar;C:\Users\fernando.marquardt\.gradle\caches\modules-2\files-2.1\com.miglayout\miglayout-swing\5.0\7b4c4d92002459e68e8f115b9ae8a774b2660490\miglayout-swing-5.0.jar;C:\Users\fernando.marquardt\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar;C:\Users\fernando.marquardt\.gradle\caches\modules-2\files-2.1\com.miglayout\miglayout-core\5.0\956daa1576bccb24e727ab75540b078171c7c432\miglayout-core-5.0.jar" />
+          <option name="classpath" value="C:\Users\fernando.marquardt\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.1.2\109c63008b2d569e38696a3178ee2493b0f6c776\kotlin-stdlib-1.1.2.jar;C:\Users\fernando.marquardt\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-reflect\1.1.2\b8cc2f486359a56c0c1b1dd125141c19d8db1734\kotlin-reflect-1.1.2.jar;C:\Users\fernando.marquardt\.gradle\caches\modules-2\files-2.1\com.miglayout\miglayout-swing\5.0\7b4c4d92002459e68e8f115b9ae8a774b2660490\miglayout-swing-5.0.jar;C:\Users\fernando.marquardt\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar;C:\Users\fernando.marquardt\.gradle\caches\modules-2\files-2.1\com.miglayout\miglayout-core\5.0\956daa1576bccb24e727ab75540b078171c7c432\miglayout-core-5.0.jar" />
           <option name="noStdlib" value="true" />
           <option name="noReflect" value="true" />
           <option name="moduleName" value="aergia_main" />
@@ -37,6 +37,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.1.2" level="project" />
     <orderEntry type="library" name="Gradle: com.miglayout:miglayout-swing:5.0" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
     <orderEntry type="library" name="Gradle: com.miglayout:miglayout-core:5.0" level="project" />
